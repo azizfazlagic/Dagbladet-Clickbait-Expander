@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ES2015",
+    "lib": ["DOM", "ES2018"],
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "declaration": false,
+    "removeComments": true,
+    "types": ["chrome"]
+  },
+  "include": [
+    "src/**/*",
+    "popup/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

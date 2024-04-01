@@ -1,0 +1,25 @@
+{
+    "manifest_version":3,
+    "name": "Dagbladet Clickbait Expander",
+    "version": "1",
+    "description": "Replaces short headlines with the article's ingress.",
+
+    "icons": {
+        "32": "/icons/icon.png"
+    },
+
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "Dagbladet Clickbait Expander"
+    },
+
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+
+    "content_scripts": [{
+        "matches": ["*://*.dagbladet.no/"],
+        "js": ["dist/script.js"]
+    }]
+}
