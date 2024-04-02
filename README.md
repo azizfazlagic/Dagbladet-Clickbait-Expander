@@ -16,11 +16,11 @@ Below are examples demonstrating the difference between the original short headl
 
 ## Installation
 To use the Dagbladet Clickbait Expander extension, follow these steps:
-1. Download the extension from [GitHub](https://github.com/azizfazlagic/dagbladet-clickbait-expander).
+1. Download the extension from [GitHub](https://github.com/azizfazlagic/Dagbladet-Expander).
 2. Install the extension in your browser.
+    - Open your browser’s extension page (for Chrome, it’s chrome://extensions).
+    - Turn on "Developer mode", click "Load unpacked", and pick the unzipped folder.
 3. Navigate to Dagbladet.no, and the extension will automatically detect and expand short headlines.
 
 ## Feedback and Contributions
 Feedback and contributions to improve the functionality and effectiveness of the extension are welcome. If you encounter any issue(s) or have suggestions for enhancements, please feel free to open an issue or submit a pull request on [GitHub](#).
-
-
