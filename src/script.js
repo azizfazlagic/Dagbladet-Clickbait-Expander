@@ -29,7 +29,7 @@ function script() {
 
 function isEligibleHeadline(headline) {
     let text = headline.innerText;
-    return text.split(" ").length <= 4 && text.length < 25;
+    return text.split(" ").length <= 4 && text.length < 50;
 }
 
 function fetchAndUpdate(element, headline) {
