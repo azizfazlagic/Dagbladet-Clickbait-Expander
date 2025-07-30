@@ -1,0 +1,19 @@
+{
+  "name": "dagbladet-clickbait-expander",
+  "version": "1.0.0",
+  "description": "## Overview Dagbladet.no, a Norwegian news website, has become somewhat notorious for using short and dramatic headlines to entice users to click on articles; also known as clickbaiting. Unfortunately, the articles themselves are often not as thrilling as the headlines might suggest. This browser extension addresses part of the problem by replacing particularly short headlines with the article's ingress. This should save users the trouble of clicking on articles that are presented as more dramatic than they actually are.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.1.1",
+    "typescript": "^5.8.3"
+  }
+}
