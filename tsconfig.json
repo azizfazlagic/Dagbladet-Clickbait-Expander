@@ -4,7 +4,6 @@
     "module": "ES2015",
     "lib": ["DOM", "ES2018"],
     "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -15,7 +14,8 @@
     "types": ["chrome"]
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "popup/**/*"
   ],
   "exclude": [
     "node_modules",
