@@ -1,7 +1,21 @@
 let isThrottled: boolean = false;
+let extensionEnabled: boolean = true;
+
+// Initialize extension state from storage
+chrome.storage.sync.get(['extensionEnabled']).then((result) => {
+    extensionEnabled = result.extensionEnabled !== false; // Default to true
+});
+
+// Listen for toggle messages from popup
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === 'toggleExtension') {
+        extensionEnabled = message.enabled;
+        console.log(`Extension ${extensionEnabled ? 'enabled' : 'disabled'}`);
+    }
+});
 
 document.addEventListener("scroll", function(): void {
-    if (!isThrottled) {
+    if (!isThrottled && extensionEnabled) {
         isThrottled = true;
         setTimeout(() => {
             script();
@@ -11,6 +25,8 @@ document.addEventListener("scroll", function(): void {
 });
 
 function script(): void {
+    if (!extensionEnabled) return;
+    
     const elements: NodeListOf<HTMLAnchorElement> = document.querySelectorAll("a");
 
     elements.forEach((current_element: HTMLAnchorElement) => {
