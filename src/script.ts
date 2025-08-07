@@ -1,12 +1,10 @@
 let isThrottled: boolean = false;
 let extensionEnabled: boolean = true;
 
-// Initialize extension state from storage
 chrome.storage.sync.get(['extensionEnabled']).then((result) => {
     extensionEnabled = result.extensionEnabled !== false; // Default to true
 });
 
-// Listen for toggle messages from popup
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'toggleExtension') {
         extensionEnabled = message.enabled;
