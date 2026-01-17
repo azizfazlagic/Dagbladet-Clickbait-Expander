@@ -19,7 +19,7 @@
     ],
 
     "content_scripts": [{
-        "matches": ["*://*.dagbladet.no/"],
-        "js": ["dist/script.js"]
+        "matches": ["*://*.dagbladet.no/*"],
+        "js": ["dist/src/script.js"]
     }]
 }
